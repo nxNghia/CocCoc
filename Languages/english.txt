@@ -1,0 +1,30 @@
+zero one two three four five six seven eight nine
+:0
+ty:1
+ hundred:2
+ thousand:3
+ million:6
+ billion:9
+ trillion:12
+
+SYNTAX_ERROR:Strange character existed
+FILE_NOT_EXISTED:File not existed
+
+zeroty->
+onety zero->ten
+onety one->eleven
+onety two->twelve
+onety three->thirteen
+onety four->fourteen
+onety five->fifteen
+onety six->sixteen
+onety seven->seventeen
+onety eight->eighteen
+onety nine->nineteen
+twoty->twenty
+threety->thirty
+fourty->forty
+fivety->fifty
+eightty->eighty
+zero hundred->
+-->minus

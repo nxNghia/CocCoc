@@ -1,0 +1,13 @@
+khong mot hai ba bon nam sau bay tam chin
+ muoi:1
+ tram:2
+ nghin:3
+ trieu:6
+ ty:9
+
+SYNTAX_ERROR:Xuat hien ky tu la
+FILE_NOT_EXISTED:Khong tim thay file
+
+khong muoi->linh
+mot muoi->muoi
+-->am
