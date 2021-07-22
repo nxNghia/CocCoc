@@ -1,0 +1,18 @@
+Giải thích về các file language:
+- dòng đầu tiên: lần lượt cách đọc của các số từ 0 -> 9
+- những dòng tiếp theo đến dòng trống đầu tiên: mỗi dòng lưu cách đọc của 1 hậu tố (hundred, thousand, ...);
+nếu hậu tố không hẳn là 1 từ (ty trong seventy, ...) thì viết bình thường; còn nếu là 1 từ hẳn hoi như (hundred, thousand, ...)
+thì lùi vào 1 ô; giá trị phía sau là quy định phải có bao nhiêu chữ số phía bên phải thì mới được gọi theo cách tương ứng (VD: một vị trí
+đọc có đuôi là thousand thì phía bên phải của nó phải có 3 chữ số)
+-những dòng tiếp theo quy định tên của các lỗi có thể gặp khi chạy chương trình
+-danh sách những từ cần thay thế sau khi chuyển cách đọc sang dạng chữ
+
+Ý tưởng:
+- Do mỗi ngôn ngữ đều quy định cần bao nhiêu chữ số để đổi cách đọc hậu tố (VD: từ thousand sang million cần tăng số lượng chữ số thêm 3), sau
+khi xác định được số chữ số này rồi, ta có thể xác định được các hậu tố nhỏ hơn mà chỉ hơn nhau 1 chữ số (VD: trong tiếng anh có hậu tố ty -> hundred,
+ hay trong tiếng việt là từ mươi -> trăm) bằng phép chia modulo.
+- Từ đó, ta có thể xác định được cách đọc của từng chữ số trong số đầu vào, sau đó ghép lại tạo thành 1 xâu hoàn chỉnh
+VD: 123456 -> | one hundred | twoty | three thousand | four hundred | fivety | six |
+- Do mỗi ngôn ngữ đều có những trường hợp đặc biệt khi đọc số nên trước khi trả về cách đọc cho từng vị trí, xâu sẽ được kiểm tra xem có nằm trong
+danh sách exceptions không, nếu có sẽ trả về giá trị tương ứng.
+VD: 123456 -> | one hundred | twenty | three thousand | four hundred | fifty | six |
